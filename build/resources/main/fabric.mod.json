@@ -9,6 +9,7 @@
   "license": "All-Rights-Reserved",
   "icon": "assets/detritus/icon.png",
   "environment": "*",
+  "accessWidener": "detritus.accesswidener",
   "entrypoints": {
     "client": [
       "com.github.mishmash.detritus.client.DetritusModClient"
