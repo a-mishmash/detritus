@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_column",
+  "textures": {
+    "end": "detritus:block/primeval_slag_end",
+    "side": "detritus:block/primeval_slag_side"
+  }
+}
