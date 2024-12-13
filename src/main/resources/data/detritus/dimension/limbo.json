@@ -4,8 +4,33 @@
     "type": "noise",
     "settings": "detritus:limbo",
     "biome_source": {
-      "type": "minecraft:fixed",
-      "biome": "detritus:petrified_slabs"
+      "type": "minecraft:multi_noise",
+      "biomes": [
+        {
+          "biome": "detritus:calcified_wastes",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": -1.85,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        },
+        {
+          "biome": "detritus:petrified_slabs",
+          "parameters": {
+            "temperature": 0,
+            "humidity": 0,
+            "continentalness": 0,
+            "erosion": 2,
+            "weirdness": 0,
+            "depth": 0,
+            "offset": 0
+          }
+        }
+      ]
     }
   }
 }

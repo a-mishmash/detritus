@@ -9,6 +9,7 @@ import static com.github.mishmash.detritus.DetritusMod.MOD_ID;
 public class DensityFunctionRegistry {
 
     public static void initialize() {
-        Registry.register(Registries.DENSITY_FUNCTION_TYPE, Identifier.of(MOD_ID,"petrified_slabs_terrain"), PetrifiedSlabsTerrain.CODEC.codec());
+        Registry.register(Registries.DENSITY_FUNCTION_TYPE, Identifier.of(MOD_ID,"double_ridge"), DoubleRidge.CODEC.codec());
+        Registry.register(Registries.DENSITY_FUNCTION_TYPE, Identifier.of(MOD_ID,"multi_noise_route"), MultiNoiseRoute.CODEC.codec());
     }
 }

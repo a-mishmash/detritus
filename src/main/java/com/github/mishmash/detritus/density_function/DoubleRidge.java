@@ -6,12 +6,12 @@ import net.minecraft.util.dynamic.CodecHolder;
 import net.minecraft.world.gen.densityfunction.DensityFunction;
 import net.minecraft.world.gen.densityfunction.DensityFunctionTypes;
 
-public record PetrifiedSlabsTerrain(DensityFunction densityFunction) implements DensityFunctionTypes.Unary {
+public record DoubleRidge(DensityFunction densityFunction) implements DensityFunctionTypes.Unary {
 
-    private static final MapCodec<PetrifiedSlabsTerrain> MAP_CODEC = RecordCodecBuilder.mapCodec((instance) ->
-            instance.group(DensityFunction.FUNCTION_CODEC.fieldOf("argument").forGetter(PetrifiedSlabsTerrain::densityFunction))
-                    .apply(instance, (PetrifiedSlabsTerrain::new)));
-    public static final CodecHolder<PetrifiedSlabsTerrain> CODEC = DensityFunctionTypes.holderOf(MAP_CODEC);
+    private static final MapCodec<DoubleRidge> MAP_CODEC = RecordCodecBuilder.mapCodec((instance) ->
+            instance.group(DensityFunction.FUNCTION_CODEC.fieldOf("input").forGetter(DoubleRidge::densityFunction))
+                    .apply(instance, (DoubleRidge::new)));
+    public static final CodecHolder<DoubleRidge> CODEC = DensityFunctionTypes.holderOf(MAP_CODEC);
 
     @Override
     public DensityFunction input() {
@@ -20,12 +20,12 @@ public record PetrifiedSlabsTerrain(DensityFunction densityFunction) implements 
 
     @Override
     public double apply(double density) {
-        return 1 / (1 + Math.pow(2.7, -100 * Math.pow(density, 5.0))) - 0.5;
+        return 0.15 / (1 + Math.pow(2.7, -0.2 * Math.pow((density - 1.4), 35.0))) + 0.1;
     }
 
     @Override
     public DensityFunction apply(DensityFunctionVisitor visitor) {
-        return new PetrifiedSlabsTerrain(this.densityFunction.apply(visitor));
+        return new DoubleRidge(this.densityFunction.apply(visitor));
     }
 
     @Override
