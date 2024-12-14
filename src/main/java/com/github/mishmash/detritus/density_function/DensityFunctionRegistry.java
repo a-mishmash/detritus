@@ -10,6 +10,5 @@ public class DensityFunctionRegistry {
 
     public static void initialize() {
         Registry.register(Registries.DENSITY_FUNCTION_TYPE, Identifier.of(MOD_ID,"double_ridge"), DoubleRidge.CODEC.codec());
-        Registry.register(Registries.DENSITY_FUNCTION_TYPE, Identifier.of(MOD_ID,"multi_noise_route"), MultiNoiseRoute.CODEC.codec());
     }
 }
