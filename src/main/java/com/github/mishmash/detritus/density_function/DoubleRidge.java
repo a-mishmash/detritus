@@ -20,7 +20,7 @@ public record DoubleRidge(DensityFunction densityFunction) implements DensityFun
 
     @Override
     public double apply(double density) {
-        return 0.1 / (1 + Math.pow(2.7, -0.2 * Math.pow((density - 1.4), 15.0))) + 0.1;
+        return 0.1 / (1 + Math.pow(2.7, -0.2 * Math.pow((density - 1.4), 9.0))) + 0.1;
     }
 
     @Override
