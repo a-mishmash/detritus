@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "detritus",
+  "version": "1.0-SNAPSHOT",
+  "name": "Detritus",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/detritus/icon.png",
+  "environment": "*",
+  "accessWidener": "detritus.accesswidener",
+  "entrypoints": {
+    "client": [
+      "com.github.mishmash.detritus.DetritusModClient"
+    ],
+    "main": [
+      "com.github.mishmash.detritus.DetritusMod"
+    ],
+    "fabric-datagen": [
+      "com.github.mishmash.detritus.DetritusDataGenerator"
+    ]
+  },
+  "mixins": [
+    "detritus.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.9",
+    "fabric": "*",
+    "minecraft": "1.21.4"
+  }
+}

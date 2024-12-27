@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "detritus:block/ossified_log_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "detritus:block/ossified_log"
+    },
+    "axis=z": {
+      "model": "detritus:block/ossified_log_horizontal",
+      "x": 90
+    }
+  }
+}
