@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "detritus:block/barrslag_top",
+    "side": "detritus:block/barrslag_side"
+  }
+}

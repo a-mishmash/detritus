@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "detritus:block/stripped_ossified_wood",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "detritus:block/stripped_ossified_wood"
+    },
+    "axis=z": {
+      "model": "detritus:block/stripped_ossified_wood",
+      "x": 90
+    }
+  }
+}

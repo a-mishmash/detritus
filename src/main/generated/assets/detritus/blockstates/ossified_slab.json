@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "detritus:block/ossified_slab"
+    },
+    "type=double": {
+      "model": "detritus:block/ossified_planks"
+    },
+    "type=top": {
+      "model": "detritus:block/ossified_slab_top"
+    }
+  }
+}

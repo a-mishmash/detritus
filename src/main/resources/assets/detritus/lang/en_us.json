@@ -1,0 +1,21 @@
+{
+  "block.detritus.barrslag": "Barrslag",
+  "block.detritus.sediment": "Sediment",
+
+  "block.detritus.ossified_log": "Ossified Log",
+  "block.detritus.ossified_wood": "Ossified Wood",
+  "block.detritus.stripped_ossified_log": "Stripped Ossified Log",
+  "block.detritus.stripped_ossified_wood": "Stripped Ossified Wood",
+  "block.detritus.ossified_planks": "Ossified Planks",
+  "block.detritus.ossified_stairs": "Ossified Stairs",
+  "block.detritus.ossified_slab": "Ossified Slab",
+  "block.detritus.ossified_fence": "Ossified Fence",
+  "block.detritus.ossified_fence_gate": "Ossified Fence Gate",
+  "block.detritus.ossified_button": "Ossified Button",
+  "block.detritus.ossified_pressure_plate": "Ossified Pressure Plate",
+  "block.detritus.ossified_door": "Ossified Door",
+  "block.detritus.ossified_trapdoor": "Ossified Trapdoor",
+  "block.detritus.marrow": "Marrow",
+  "block.detritus.limber_marrow": "Limber Marrow",
+  "block.detritus.ossified_sapling": "Ossified Sapling"
+}

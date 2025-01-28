@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "detritus",
+	"version": "${version}",
+	"name": "Detritus",
+	"description": "Where do things go when they are forgotten?",
+	"authors": [
+		"mishmash"
+	],
+	"contact": {
+		"homepage": "https://github.com/a-mishmash/detritus",
+		"sources": "https://github.com/a-mishmash/detritus"
+	},
+	"license": "GPLv3",
+	"icon": "assets/detritus/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"mishmash.detritus.DetritusMod"
+		],
+		"client": [
+			"mishmash.detritus.DetritusModClient"
+		],
+		"fabric-datagen": [
+			"mishmash.detritus.DetritusDataGenerator"
+		]
+	},
+	"mixins": [
+		"detritus.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.10",
+		"minecraft": "~1.21",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
