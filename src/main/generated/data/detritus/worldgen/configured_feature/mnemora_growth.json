@@ -1,0 +1,74 @@
+{
+  "type": "minecraft:tree",
+  "config": {
+    "decorators": [
+      {
+        "type": "minecraft:attached_to_leaves",
+        "block_provider": {
+          "type": "minecraft:simple_state_provider",
+          "state": {
+            "Name": "detritus:limber_marrow",
+            "Properties": {
+              "age": "0"
+            }
+          }
+        },
+        "directions": [
+          "down"
+        ],
+        "exclusion_radius_xz": 1,
+        "exclusion_radius_y": 3,
+        "probability": 1.0,
+        "required_empty_blocks": 2
+      }
+    ],
+    "dirt_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "detritus:slag",
+        "Properties": {
+          "axis": "y"
+        }
+      }
+    },
+    "foliage_placer": {
+      "type": "minecraft:blob_foliage_placer",
+      "height": 0,
+      "offset": 0,
+      "radius": {
+        "type": "minecraft:uniform",
+        "max_inclusive": 4,
+        "min_inclusive": 3
+      }
+    },
+    "foliage_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "detritus:mnemora_polypore"
+      }
+    },
+    "force_dirt": false,
+    "ignore_vines": false,
+    "minimum_size": {
+      "type": "minecraft:two_layers_feature_size",
+      "limit": 1,
+      "lower_size": 0,
+      "upper_size": 1
+    },
+    "trunk_placer": {
+      "type": "minecraft:forking_trunk_placer",
+      "base_height": 2,
+      "height_rand_a": 3,
+      "height_rand_b": 5
+    },
+    "trunk_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "detritus:mnemora_chine",
+        "Properties": {
+          "axis": "y"
+        }
+      }
+    }
+  }
+}

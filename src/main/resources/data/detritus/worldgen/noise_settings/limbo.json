@@ -163,7 +163,7 @@
               "argument1": {
                 "type": "minecraft:add",
                 "argument1": {
-                  "type": "minecraft:cache_2d",
+                  "type": "minecraft:flat_cache",
                   "argument": {
                     "type": "minecraft:noise",
                     "noise": "minecraft:badlands_pillar_roof",
@@ -224,13 +224,33 @@
         "if_true": {
           "type": "minecraft:biome",
           "biome_is": [
-            "detritus:calcified_wastes"
+            "detritus:memory_plateau_forest",
+            "detritus:memory_plateau_plains"
           ]
         },
         "then_run": {
-          "type": "minecraft:block",
-          "result_state": {
-            "Name": "detritus:sediment"
+          "type": "minecraft:condition",
+          "if_true": {
+            "type": "minecraft:not",
+            "invert": {
+              "type": "minecraft:steep"
+            }
+          },
+          "then_run": {
+            "type": "minecraft:condition",
+            "if_true": {
+              "type": "minecraft:stone_depth",
+              "offset": 0,
+              "surface_type": "floor",
+              "add_surface_depth": false,
+              "secondary_depth_range": 1
+            },
+            "then_run": {
+              "type": "minecraft:block",
+              "result_state": {
+                "Name": "detritus:slag"
+              }
+            }
           }
         }
       }

@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/cube_column",
-  "textures": {
-    "end": "detritus:block/ossified_log_top",
-    "side": "detritus:block/ossified_log"
-  }
-}

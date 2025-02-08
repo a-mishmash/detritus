@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "detritus:block/mnemora_scoliotic",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "detritus:block/mnemora_scoliotic"
+    },
+    "axis=z": {
+      "model": "detritus:block/mnemora_scoliotic",
+      "x": 90
+    }
+  }
+}

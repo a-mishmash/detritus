@@ -17,6 +17,6 @@ public class DetritusItemTagProvider extends FabricTagProvider.ItemTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(ItemTags.COMPLETES_FIND_TREE_TUTORIAL)
-                .add(DetritusBlocks.OSSIFIED_LOG.asItem());
+                .add(DetritusBlocks.MNEMORA_CHINE.asItem());
     }
 }

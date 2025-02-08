@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "detritus:block/mnemora_chine",
+    "side": "detritus:block/mnemora_chine"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/flowerbed_2",
+  "textures": {
+    "flowerbed": "detritus:block/mnemora_flatcaps",
+    "stem": "detritus:block/mnemora_flatcaps_stem"
+  }
+}

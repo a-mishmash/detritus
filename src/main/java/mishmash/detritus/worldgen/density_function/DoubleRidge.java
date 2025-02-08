@@ -15,7 +15,7 @@ public record DoubleRidge(DensityFunction densityFunction) implements DensityFun
 
     @Override
     public double sample(NoisePos pos) {
-        return 0.1 / (1 + Math.pow(2.7, -0.2 * Math.pow((densityFunction.sample(pos) - 1.4), 9.0))) + 0.1;
+        return 0.1 / (1 + Math.pow(2.7, -0.2 * Math.pow((densityFunction.sample(pos) - 1.4), 81.0))) + 0.1;
     }
 
     @Override

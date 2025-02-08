@@ -1,6 +1,6 @@
-// 1.21	2025-01-27T16:02:03.79651	Detritus/
-a8b3fe179301f34d6e15aa8dad601022b0e953d0 data/detritus/worldgen/biome/soulswept_flats.json
-6e0a5d35b3074540393f550a1fafef8d56cd9e1e data/detritus/worldgen/configured_feature/ossified_tree.json
-e4c8790da853aea333ac9e286e2cc11524348a38 data/detritus/worldgen/placed_feature/ossified_tree_placed.json
-a8b3fe179301f34d6e15aa8dad601022b0e953d0 data/detritus/worldgen/biome/memory_plateau_plains.json
-ac6e1dfdd7554c4298d5c4a19676a80b4d7aa0c2 data/detritus/worldgen/biome/memory_plateau_forest.json
+// 1.21	2025-02-07T12:25:05.37266	Detritus/
+06d7d3ecd11416d6812530a39379d1208dc65bc5 data/detritus/worldgen/biome/soulswept_flats.json
+cabaad03e18682d9a2f6e87be91f747edf49a7b4 data/detritus/worldgen/placed_feature/mnemora_growth.json
+d7f03b79bcf3cacd03784156a7adec41992c0213 data/detritus/worldgen/configured_feature/mnemora_growth.json
+06d7d3ecd11416d6812530a39379d1208dc65bc5 data/detritus/worldgen/biome/memory_plateau_plains.json
+8380c892a0c81cca37998a5ae438740ec878d650 data/detritus/worldgen/biome/memory_plateau_forest.json

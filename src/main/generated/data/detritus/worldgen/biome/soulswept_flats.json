@@ -3,8 +3,8 @@
   "downfall": 0.0,
   "effects": {
     "fog_color": 0,
-    "foliage_color": 0,
-    "grass_color": 0,
+    "foliage_color": 10445890,
+    "grass_color": 10445890,
     "particle": {
       "options": {
         "type": "minecraft:ash"
@@ -28,5 +28,5 @@
     "water_ambient": [],
     "water_creature": []
   },
-  "temperature": -1.0
+  "temperature": 1.0
 }

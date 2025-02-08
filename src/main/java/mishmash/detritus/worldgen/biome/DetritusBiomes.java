@@ -44,8 +44,8 @@ public class DetritusBiomes {
         return new Biome.Builder()
                 .effects(new BiomeEffects.Builder()
                         .fogColor(0)
-                        .foliageColor(0)
-                        .grassColor(0)
+                        .foliageColor(10445890)
+                        .grassColor(10445890)
                         .waterColor(0)
                         .waterFogColor(0)
                         .skyColor(0)
@@ -53,7 +53,7 @@ public class DetritusBiomes {
                         .build()
                 )
                 .precipitation(false)
-                .temperature(-1.0f)
+                .temperature(1.0f)
                 .downfall(0.0f)
                 .spawnSettings(spawnSettingsBuilder.build())
                 .generationSettings(generationSettingsBuilder.build())
@@ -65,7 +65,7 @@ public class DetritusBiomes {
                 new GenerationSettings.LookupBackedBuilder(placedFeatureLookup, carverLookup);
         generationSettingsBuilder.feature(
                 GenerationStep.Feature.VEGETAL_DECORATION,
-                DetritusFeatures.OSSIFIED_TREE_PLACED_KEY
+                DetritusFeatures.MNEMORA_GROWTH_PLACED_KEY
         );
 
         SpawnSettings.Builder spawnSettingsBuilder = new SpawnSettings.Builder();
@@ -74,8 +74,8 @@ public class DetritusBiomes {
         return new Biome.Builder()
                 .effects(new BiomeEffects.Builder()
                         .fogColor(0)
-                        .foliageColor(0)
-                        .grassColor(0)
+                        .foliageColor(10445890)
+                        .grassColor(10445890)
                         .waterColor(0)
                         .waterFogColor(0)
                         .skyColor(0)
@@ -83,7 +83,7 @@ public class DetritusBiomes {
                         .build()
                 )
                 .precipitation(false)
-                .temperature(-1.0f)
+                .temperature(1.0f)
                 .downfall(0.0f)
                 .spawnSettings(spawnSettingsBuilder.build())
                 .generationSettings(generationSettingsBuilder.build())
@@ -99,8 +99,8 @@ public class DetritusBiomes {
         return new Biome.Builder()
                 .effects(new BiomeEffects.Builder()
                         .fogColor(0)
-                        .foliageColor(0)
-                        .grassColor(0)
+                        .foliageColor(10445890)
+                        .grassColor(10445890)
                         .waterColor(0)
                         .waterFogColor(0)
                         .skyColor(0)
@@ -108,7 +108,7 @@ public class DetritusBiomes {
                         .build()
                 )
                 .precipitation(false)
-                .temperature(-1.0f)
+                .temperature(1.0f)
                 .downfall(0.0f)
                 .spawnSettings(spawnSettingsBuilder.build())
                 .generationSettings(generationSettingsBuilder.build())

@@ -17,39 +17,39 @@ public class DetritusBlockTagProvider extends FabricTagProvider.BlockTagProvider
     @Override
     protected void configure(RegistryWrapper.WrapperLookup wrapperLookup) {
         getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+                .add(DetritusBlocks.SLAG)
                 .add(DetritusBlocks.BARRSLAG);
 
         getOrCreateTagBuilder(BlockTags.AXE_MINEABLE)
-                .add(DetritusBlocks.OSSIFIED_LOG)
-                .add(DetritusBlocks.OSSIFIED_WOOD)
-                .add(DetritusBlocks.STRIPPED_OSSIFIED_LOG)
-                .add(DetritusBlocks.STRIPPED_OSSIFIED_WOOD)
-                .add(DetritusBlocks.OSSIFIED_PLANKS);
+                .add(DetritusBlocks.MNEMORA_CHINE)
+                .add(DetritusBlocks.MNEMORA_SCOLIOTIC)
+                .add(DetritusBlocks.MNEMORA_MARROW)
+                .add(DetritusBlocks.MNEMORA_PLANKS);
 
         getOrCreateTagBuilder(BlockTags.SHOVEL_MINEABLE)
                 .add(DetritusBlocks.SEDIMENT);
 
         getOrCreateTagBuilder(BlockTags.HOE_MINEABLE)
-                .add(DetritusBlocks.MARROW);
+                .add(DetritusBlocks.MNEMORA_POLYPORE);
 
         getOrCreateTagBuilder(BlockTags.WOODEN_STAIRS)
-                .add(DetritusBlocks.OSSIFIED_STAIRS);
+                .add(DetritusBlocks.MNEMORA_STAIRS);
         getOrCreateTagBuilder(BlockTags.WOODEN_SLABS)
-                .add(DetritusBlocks.OSSIFIED_SLAB);
+                .add(DetritusBlocks.MNEMORA_SLAB);
         getOrCreateTagBuilder(BlockTags.WOODEN_FENCES)
-                .add(DetritusBlocks.OSSIFIED_FENCE);
+                .add(DetritusBlocks.MNEMORA_FENCE);
         getOrCreateTagBuilder(BlockTags.FENCE_GATES)
-                .add(DetritusBlocks.OSSIFIED_FENCE_GATE);
+                .add(DetritusBlocks.MNEMORA_FENCE_GATE);
         getOrCreateTagBuilder(BlockTags.WOODEN_DOORS)
-                .add(DetritusBlocks.OSSIFIED_DOOR);
+                .add(DetritusBlocks.MNEMORA_DOOR);
         getOrCreateTagBuilder(BlockTags.WOODEN_TRAPDOORS)
-                .add(DetritusBlocks.OSSIFIED_TRAPDOOR);
+                .add(DetritusBlocks.MNEMORA_TRAPDOOR);
         getOrCreateTagBuilder(BlockTags.WOODEN_BUTTONS)
-                .add(DetritusBlocks.OSSIFIED_BUTTON);
+                .add(DetritusBlocks.MNEMORA_BUTTON);
         getOrCreateTagBuilder(BlockTags.WOODEN_PRESSURE_PLATES)
-                .add(DetritusBlocks.OSSIFIED_PRESSURE_PLATE);
+                .add(DetritusBlocks.MNEMORA_PRESSURE_PLATE);
 
         getOrCreateTagBuilder(BlockTags.SAPLINGS)
-                .add(DetritusBlocks.OSSIFIED_SAPLING);
+                .add(DetritusBlocks.MNEMORA_FLATCAPS);
     }
 }

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "detritus:block/mnemora_planks",
+    "side": "detritus:block/mnemora_planks",
+    "top": "detritus:block/mnemora_planks"
+  }
+}

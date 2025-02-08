@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "detritus:block/mnemora_slab"
+    },
+    "type=double": {
+      "model": "detritus:block/mnemora_planks"
+    },
+    "type=top": {
+      "model": "detritus:block/mnemora_slab_top"
+    }
+  }
+}

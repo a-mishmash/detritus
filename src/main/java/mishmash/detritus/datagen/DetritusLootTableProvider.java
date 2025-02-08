@@ -15,26 +15,26 @@ public class DetritusLootTableProvider extends FabricBlockLootTableProvider {
 
     @Override
     public void generate() {
+        addDrop(DetritusBlocks.SLAG);
         addDrop(DetritusBlocks.BARRSLAG);
         addDrop(DetritusBlocks.SEDIMENT);
 
-        addDrop(DetritusBlocks.OSSIFIED_LOG);
-        addDrop(DetritusBlocks.OSSIFIED_WOOD);
-        addDrop(DetritusBlocks.STRIPPED_OSSIFIED_LOG);
-        addDrop(DetritusBlocks.STRIPPED_OSSIFIED_WOOD);
-        addDrop(DetritusBlocks.OSSIFIED_PLANKS);
-        addDrop(DetritusBlocks.OSSIFIED_STAIRS);
-        addDrop(DetritusBlocks.OSSIFIED_SLAB, slabDrops(DetritusBlocks.OSSIFIED_SLAB));
-        addDrop(DetritusBlocks.OSSIFIED_DOOR, doorDrops(DetritusBlocks.OSSIFIED_DOOR));
-        addDrop(DetritusBlocks.OSSIFIED_TRAPDOOR);
-        addDrop(DetritusBlocks.OSSIFIED_BUTTON);
-        addDrop(DetritusBlocks.OSSIFIED_PRESSURE_PLATE);
-        addDrop(DetritusBlocks.OSSIFIED_FENCE);
-        addDrop(DetritusBlocks.OSSIFIED_FENCE_GATE);
-        addDrop(DetritusBlocks.OSSIFIED_SAPLING);
+        addDrop(DetritusBlocks.MNEMORA_CHINE);
+        addDrop(DetritusBlocks.MNEMORA_SCOLIOTIC);
+        addDrop(DetritusBlocks.MNEMORA_MARROW);
+        addDrop(DetritusBlocks.MNEMORA_PLANKS);
+        addDrop(DetritusBlocks.MNEMORA_STAIRS);
+        addDrop(DetritusBlocks.MNEMORA_SLAB, slabDrops(DetritusBlocks.MNEMORA_SLAB));
+        addDrop(DetritusBlocks.MNEMORA_DOOR, doorDrops(DetritusBlocks.MNEMORA_DOOR));
+        addDrop(DetritusBlocks.MNEMORA_TRAPDOOR);
+        addDrop(DetritusBlocks.MNEMORA_BUTTON);
+        addDrop(DetritusBlocks.MNEMORA_PRESSURE_PLATE);
+        addDrop(DetritusBlocks.MNEMORA_FENCE);
+        addDrop(DetritusBlocks.MNEMORA_FENCE_GATE);
 
-        addDrop(DetritusBlocks.MARROW);
+        addDrop(DetritusBlocks.MNEMORA_POLYPORE);
         addDrop(DetritusBlocks.LIMBER_MARROW);
         addDrop(DetritusBlocks.LIMBER_MARROW_PLANT, DetritusBlocks.LIMBER_MARROW);
+        addDrop(DetritusBlocks.MNEMORA_FLATCAPS);
     }
 }

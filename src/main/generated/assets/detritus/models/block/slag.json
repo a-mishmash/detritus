@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "detritus:block/slag_top",
+    "side": "detritus:block/slag_side"
+  }
+}

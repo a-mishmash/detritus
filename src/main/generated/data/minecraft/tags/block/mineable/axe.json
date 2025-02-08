@@ -1,9 +1,8 @@
 {
   "values": [
-    "detritus:ossified_log",
-    "detritus:ossified_wood",
-    "detritus:stripped_ossified_log",
-    "detritus:stripped_ossified_wood",
-    "detritus:ossified_planks"
+    "detritus:mnemora_chine",
+    "detritus:mnemora_scoliotic",
+    "detritus:mnemora_marrow",
+    "detritus:mnemora_planks"
   ]
 }

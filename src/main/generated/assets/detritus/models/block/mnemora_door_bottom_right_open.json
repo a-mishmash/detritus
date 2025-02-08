@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/door_bottom_right_open",
+  "textures": {
+    "bottom": "detritus:block/mnemora_door_bottom",
+    "top": "detritus:block/mnemora_door_top"
+  }
+}

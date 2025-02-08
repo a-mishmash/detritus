@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "detritus:block/ossified_planks",
-    "side": "detritus:block/ossified_planks",
-    "top": "detritus:block/ossified_planks"
-  }
-}

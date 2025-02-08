@@ -1,7 +1,0 @@
-{
-  "parent": "minecraft:block/door_top_right",
-  "textures": {
-    "bottom": "detritus:block/ossified_door_bottom",
-    "top": "detritus:block/ossified_door_top"
-  }
-}
