@@ -67,6 +67,10 @@ public class DetritusBiomes {
                 GenerationStep.Feature.VEGETAL_DECORATION,
                 DetritusFeatures.MNEMORA_GROWTH_PLACED_KEY
         );
+        generationSettingsBuilder.feature(
+                GenerationStep.Feature.VEGETAL_DECORATION,
+                DetritusFeatures.MNEMORA_FLATCAPS_PLACED_KEY
+        );
 
         SpawnSettings.Builder spawnSettingsBuilder = new SpawnSettings.Builder();
         // spawnSettingsBuilder.spawn(SpawnGroup.MONSTER, new SpawnSettings.SpawnEntry(EntityType.WITHER_SKELETON, 2, 3, 5));
@@ -93,6 +97,10 @@ public class DetritusBiomes {
     private static Biome memoryPlateauPlains(RegistryEntryLookup<PlacedFeature> placedFeatureLookup, RegistryEntryLookup<ConfiguredCarver<?>> carverLookup) {
         GenerationSettings.LookupBackedBuilder generationSettingsBuilder =
                 new GenerationSettings.LookupBackedBuilder(placedFeatureLookup, carverLookup);
+        generationSettingsBuilder.feature(
+                GenerationStep.Feature.VEGETAL_DECORATION,
+                DetritusFeatures.MNEMORA_FLATCAPS_PLACED_KEY
+        );
 
         SpawnSettings.Builder spawnSettingsBuilder = new SpawnSettings.Builder();
 

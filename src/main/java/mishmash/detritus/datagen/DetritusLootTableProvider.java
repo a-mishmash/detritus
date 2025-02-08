@@ -3,6 +3,7 @@ package mishmash.detritus.datagen;
 import mishmash.detritus.block.DetritusBlocks;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.minecraft.loot.entry.GroupEntry;
 import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
@@ -35,6 +36,8 @@ public class DetritusLootTableProvider extends FabricBlockLootTableProvider {
         addDrop(DetritusBlocks.MNEMORA_POLYPORE);
         addDrop(DetritusBlocks.LIMBER_MARROW);
         addDrop(DetritusBlocks.LIMBER_MARROW_PLANT, DetritusBlocks.LIMBER_MARROW);
-        addDrop(DetritusBlocks.MNEMORA_FLATCAPS);
+        dropsWithShears(DetritusBlocks.MNEMORA_FLATCAPS);
+        dropsWithSilkTouch(DetritusBlocks.MNEMORA_FLATCAPS);
+        addDrop(DetritusBlocks.OYSTER_MUSHROOMS);
     }
 }

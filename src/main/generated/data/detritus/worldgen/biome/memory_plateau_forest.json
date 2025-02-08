@@ -26,7 +26,8 @@
     [],
     [],
     [
-      "detritus:mnemora_growth"
+      "detritus:mnemora_growth",
+      "detritus:mnemora_flatcaps"
     ]
   ],
   "has_precipitation": false,

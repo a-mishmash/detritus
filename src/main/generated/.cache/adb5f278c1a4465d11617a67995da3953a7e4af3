@@ -1,4 +1,4 @@
-// 1.21	2025-02-07T12:25:05.370295	Detritus/Block Loot Tables
+// 1.21	2025-02-07T13:13:23.695622	Detritus/Block Loot Tables
 23ba0b30dd6a2b1ea12d17a57a1571d41a5cac42 data/detritus/loot_table/blocks/mnemora_planks.json
 1b0babc6d5f1b7b83be601d87cc884b698c96e83 data/detritus/loot_table/blocks/mnemora_polypore.json
 8af17367829a9ce17c1c6dff9095c3ed8e67cd68 data/detritus/loot_table/blocks/sediment.json
@@ -15,6 +15,6 @@ e1ae920200a0f6cff622a594f8e9efaa8b027c92 data/detritus/loot_table/blocks/mnemora
 c5cbb24e87089b5a89103fae9f9802dc544215db data/detritus/loot_table/blocks/limber_marrow_plant.json
 e2fc27f08b3eb3f6d476dd5d1acd5bd8d954a303 data/detritus/loot_table/blocks/mnemora_pressure_plate.json
 2f22f243886f329ba8dd497b7160824eebb36ea4 data/detritus/loot_table/blocks/mnemora_fence.json
-ab45420faf5b02f7fd1abd071deb845f2e4fc923 data/detritus/loot_table/blocks/mnemora_button.json
 1b90c2a8a12d8d4881693f3d7f1ecee88095530f data/detritus/loot_table/blocks/mnemora_door.json
+ab45420faf5b02f7fd1abd071deb845f2e4fc923 data/detritus/loot_table/blocks/mnemora_button.json
 2dea22c3e61ffc1ccb5135b8df7343eedc3b2734 data/detritus/loot_table/blocks/mnemora_marrow.json

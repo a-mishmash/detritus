@@ -24,13 +24,13 @@ import java.util.function.BiFunction;
 public class MnemoraFlatcapsBlock extends SaplingBlock implements Fertilizable {
 
     public static final DirectionProperty FACING;
-    public static final IntProperty FLOWER_AMOUNT;
+    public static final IntProperty MUSHROOM_AMOUNT;
     public static final IntProperty STAGE;
     private static final BiFunction<Direction, Integer, VoxelShape> FACING_AND_AMOUNT_TO_SHAPE;
 
     protected MnemoraFlatcapsBlock(SaplingGenerator generator, Settings settings) {
         super(generator, settings);
-        this.setDefaultState(((this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)).with(FLOWER_AMOUNT, 1).with(STAGE, 0));
+        this.setDefaultState(((this.stateManager.getDefaultState()).with(FACING, Direction.NORTH)).with(MUSHROOM_AMOUNT, 1).with(STAGE, 0));
     }
 
     @Override
@@ -50,23 +50,23 @@ public class MnemoraFlatcapsBlock extends SaplingBlock implements Fertilizable {
 
     @Override
     public boolean canReplace(BlockState state, ItemPlacementContext context) {
-        return !context.shouldCancelInteraction() && context.getStack().isOf(this.asItem()) && state.get(FLOWER_AMOUNT) < 4 || super.canReplace(state, context);
+        return !context.shouldCancelInteraction() && context.getStack().isOf(this.asItem()) && state.get(MUSHROOM_AMOUNT) < 4 || super.canReplace(state, context);
     }
 
     @Override
     public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-        return FACING_AND_AMOUNT_TO_SHAPE.apply(state.get(FACING), state.get(FLOWER_AMOUNT));
+        return FACING_AND_AMOUNT_TO_SHAPE.apply(state.get(FACING), state.get(MUSHROOM_AMOUNT));
     }
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {
         BlockState blockState = ctx.getWorld().getBlockState(ctx.getBlockPos());
-        return blockState.isOf(this) ? blockState.with(FLOWER_AMOUNT, Math.min(4, blockState.get(FLOWER_AMOUNT) + 1)) : this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
+        return blockState.isOf(this) ? blockState.with(MUSHROOM_AMOUNT, Math.min(4, blockState.get(MUSHROOM_AMOUNT) + 1)) : this.getDefaultState().with(FACING, ctx.getHorizontalPlayerFacing().getOpposite());
     }
 
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING, FLOWER_AMOUNT, STAGE);
+        builder.add(FACING, MUSHROOM_AMOUNT, STAGE);
     }
 
     @Override
@@ -81,9 +81,9 @@ public class MnemoraFlatcapsBlock extends SaplingBlock implements Fertilizable {
 
     @Override
     public void grow(ServerWorld world, Random random, BlockPos pos, BlockState state) {
-        int i = state.get(FLOWER_AMOUNT);
+        int i = state.get(MUSHROOM_AMOUNT);
         if (i < 4) {
-            world.setBlockState(pos, state.with(FLOWER_AMOUNT, i + 1), 2);
+            world.setBlockState(pos, state.with(MUSHROOM_AMOUNT, i + 1), 2);
         } else {
             this.generate(world, pos, state, random);
         }
@@ -100,7 +100,7 @@ public class MnemoraFlatcapsBlock extends SaplingBlock implements Fertilizable {
 
     static {
         FACING = Properties.HORIZONTAL_FACING;
-        FLOWER_AMOUNT = Properties.FLOWER_AMOUNT;
+        MUSHROOM_AMOUNT = Properties.FLOWER_AMOUNT;
         STAGE = Properties.STAGE;
         FACING_AND_AMOUNT_TO_SHAPE = Util.memoize((facing, flowerAmount) -> {
             VoxelShape[] voxelShapes = new VoxelShape[]{

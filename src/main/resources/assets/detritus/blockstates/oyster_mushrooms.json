@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "detritus:block/oyster_mushrooms",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "detritus:block/oyster_mushrooms",
+      "y": 270
+    },
+    "facing=west": {
+      "model": "detritus:block/oyster_mushrooms",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "detritus:block/oyster_mushrooms",
+      "y": 180
+    }
+  }
+}

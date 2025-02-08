@@ -171,6 +171,15 @@ public class DetritusBlocks {
                     .sounds(BlockSoundGroup.WEEPING_VINES) // placeholder
                     .pistonBehavior(PistonBehavior.DESTROY)
     );
+    public static final Block OYSTER_MUSHROOMS = register(
+            "oyster_mushrooms", OysterMushroomsBlock::new,
+            AbstractBlock.Settings.create()
+                    .mapColor(MapColor.DULL_RED)
+                    .noCollision()
+                    .breakInstantly()
+                    .sounds(BlockSoundGroup.WEEPING_VINES) // placeholder
+                    .pistonBehavior(PistonBehavior.DESTROY)
+    );
     // endregion
 
     // initialize mod blocks

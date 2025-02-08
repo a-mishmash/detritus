@@ -1,29 +1,25 @@
 package mishmash.detritus.worldgen.feature;
 
-import com.mojang.serialization.codecs.DispatchedMapCodec;
 import mishmash.detritus.block.DetritusBlocks;
+import mishmash.detritus.block.MnemoraFlatcapsBlock;
+import net.minecraft.block.BlockState;
 import net.minecraft.registry.Registerable;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
+import net.minecraft.util.collection.DataPool;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.*;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.feature.size.TwoLayersFeatureSize;
 import net.minecraft.world.gen.foliage.BlobFoliagePlacer;
-import net.minecraft.world.gen.placementmodifier.BiomePlacementModifier;
-import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 import net.minecraft.world.gen.treedecorator.AttachedToLeavesTreeDecorator;
-import net.minecraft.world.gen.treedecorator.LeavesVineTreeDecorator;
-import net.minecraft.world.gen.treedecorator.TreeDecorator;
-import net.minecraft.world.gen.treedecorator.TreeDecoratorType;
 import net.minecraft.world.gen.trunk.ForkingTrunkPlacer;
 
 import java.util.Collections;
-import java.util.List;
 
 import static mishmash.detritus.DetritusMod.MOD_ID;
 
@@ -32,10 +28,13 @@ public class DetritusFeatures {
     public static final RegistryKey<ConfiguredFeature<?, ?>> MNEMORA_GROWTH_KEY = registerKeyConfigured("mnemora_growth");
     public static final RegistryKey<PlacedFeature> MNEMORA_GROWTH_PLACED_KEY = registerKeyPlaced("mnemora_growth");
 
+    public static final RegistryKey<ConfiguredFeature<?, ?>> MNEMORA_FLATCAPS_KEY = registerKeyConfigured("mnemora_flatcaps");
+    public static final RegistryKey<PlacedFeature> MNEMORA_FLATCAPS_PLACED_KEY = registerKeyPlaced("mnemora_flatcaps");
+
     public static void initializeConfiguredFeatures(Registerable<ConfiguredFeature<?, ?>> context) {
 
         // Mnemora Growth
-        TreeFeatureConfig config = new TreeFeatureConfig.Builder(
+        TreeFeatureConfig mnemoraGrowthConfig = new TreeFeatureConfig.Builder(
                 BlockStateProvider.of(DetritusBlocks.MNEMORA_CHINE),
                 new ForkingTrunkPlacer(2, 3, 5),
                 BlockStateProvider.of(DetritusBlocks.MNEMORA_POLYPORE),
@@ -54,7 +53,22 @@ public class DetritusFeatures {
                         Collections.singletonList(Direction.DOWN)
                 )))
                 .build();
-        context.register(MNEMORA_GROWTH_KEY, new ConfiguredFeature<>(Feature.TREE, config));
+        context.register(MNEMORA_GROWTH_KEY, new ConfiguredFeature<>(Feature.TREE, mnemoraGrowthConfig));
+
+        DataPool.Builder<BlockState> builder = DataPool.builder();
+        for (int i = 1; i <= 4; i++) {
+            for (Direction direction : Direction.Type.HORIZONTAL) {
+                builder.add(DetritusBlocks.MNEMORA_FLATCAPS.getDefaultState()
+                        .with(MnemoraFlatcapsBlock.MUSHROOM_AMOUNT, i)
+                        .with(MnemoraFlatcapsBlock.FACING, direction), 1);
+            }
+        }
+        RandomPatchFeatureConfig mnemoraFlatcapsConfig = new RandomPatchFeatureConfig(
+                96, 6, 2, PlacedFeatures.createEntry(
+                        Feature.SIMPLE_BLOCK,
+                        new SimpleBlockFeatureConfig(new WeightedBlockStateProvider(builder)))
+        );
+        context.register(MNEMORA_FLATCAPS_KEY, new ConfiguredFeature<>(Feature.RANDOM_PATCH, mnemoraFlatcapsConfig));
     }
 
     public static void initializePlacedFeatures(Registerable<PlacedFeature> context) {
@@ -68,6 +82,17 @@ public class DetritusFeatures {
                             PlacedFeatures.createCountExtraModifier(32, 0.1f, 2),
                             DetritusBlocks.MNEMORA_FLATCAPS
                     )
+                )
+        );
+
+        context.register(
+                MNEMORA_FLATCAPS_PLACED_KEY,
+                new PlacedFeature(
+                        configuredFeatures.getOrThrow(MNEMORA_FLATCAPS_KEY),
+                        VegetationPlacedFeatures.treeModifiersWithWouldSurvive(
+                                PlacedFeatures.createCountExtraModifier(32, 0.1f, 2),
+                                DetritusBlocks.MNEMORA_FLATCAPS
+                        )
                 )
         );
     }

@@ -2,7 +2,7 @@
 	"credit": "Made with Blockbench! (thank you for being free software -a_mishmash ❤)",
 	"texture_size": [32, 32],
 	"textures": {
-		"0": "oyster_mushrooms"
+		"0": "detritus:block/oyster_mushrooms"
 	},
 	"elements": [
 		{
